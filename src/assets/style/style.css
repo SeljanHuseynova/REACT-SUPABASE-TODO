@@ -1,0 +1,224 @@
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", serif;
+  transition: 0.3s ease all;
+}
+
+/* MAIN */
+.main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #c9d6df;
+}
+.main-container .container {
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px;
+  width: 40%;
+}
+@media (max-width: 1400px) {
+  .main-container .container {
+    width: 50%;
+  }
+}
+@media (max-width: 960px) {
+  .main-container .container {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .main-container .container {
+    width: 90%;
+  }
+}
+@media (max-width: 360px) {
+  .main-container .container {
+    width: 97%;
+  }
+}
+.main-container .container .todo-form-container form {
+  display: flex;
+  gap: 10px;
+}
+.main-container .container .todo-form-container form input {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  padding: 10px 70px 10px 10px;
+  border-radius: 5px;
+  border: none;
+}
+@media (max-width: 442px) {
+  .main-container .container .todo-form-container form input {
+    padding: 10px 30px 10px 10px;
+  }
+}
+@media (max-width: 367px) {
+  .main-container .container .todo-form-container form input {
+    padding: 10px 17px 10px 10px;
+  }
+}
+.main-container .container .todo-form-container form .btn {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #52616b;
+  color: white;
+}
+.main-container .container .todo-form-container form .btn:hover {
+  background-color: #f0f5f9;
+  color: #52616b;
+}
+.main-container .container .results-container {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+}
+.main-container .container .results-container::-webkit-scrollbar {
+  width: 5px;
+}
+.main-container .container .results-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.main-container .container .results-container::-webkit-scrollbar-thumb {
+  background: #88a0b1;
+  border-radius: 10px;
+}
+.main-container .container .results-container::-webkit-scrollbar-thumb:hover {
+  background: #52616b;
+}
+.main-container .container .results-container .task-summary {
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f0f5f9;
+  border-radius: 8px;
+  color: #52616b;
+}
+.main-container .container .results-container ul {
+  list-style-type: decimal;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main-container .container .results-container ul .todo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  word-wrap: break-word; /* Ensures long words break and wrap to the next line */
+}
+.main-container .container .results-container ul .todo:hover {
+  background-color: rgba(201, 214, 223, 0.5);
+}
+.main-container .container .results-container ul .todo .todo-output {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping of children */
+}
+.main-container .container .results-container ul .todo .todo-output .todo-input {
+  border: none;
+  outline: none;
+  background-color: #f0f5f9;
+  padding: 5px 3px;
+  border-radius: 5px;
+  width: 80%;
+  min-width: 0; /* Allows input to shrink in flex context */
+}
+.main-container .container .results-container ul .todo .todo-output .icon-container {
+  background-color: #52616b;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.main-container .container .results-container ul .todo .todo-output .icon-container:hover {
+  background-color: #f0f5f9;
+}
+.main-container .container .results-container ul .todo .todo-output .icon-container .icon {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+.main-container .container .results-container ul .todo .todo-output .icon-container .icon:hover {
+  color: #52616b;
+}
+.main-container .container .results-container ul .todo .todo-number {
+  font-size: 1em;
+  margin-right: 10px; /* Space between number and text */
+}
+.main-container .container .results-container ul .todo .right {
+  display: flex;
+  align-items: center;
+}
+.main-container .container .results-container ul .todo .right .icons {
+  display: flex;
+  gap: 5px;
+}
+.main-container .container .results-container ul .todo .right .icons .icon-container {
+  background-color: #52616b;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.main-container .container .results-container ul .todo .right .icons .icon-container:hover {
+  background-color: #f0f5f9;
+}
+.main-container .container .results-container ul .todo .right .icons .icon-container .icon {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+.main-container .container .results-container ul .todo .right .icons .icon-container .icon:hover {
+  color: #52616b;
+}
+
+.switch-theme {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  margin-top: 20px;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #52616b;
+  color: white;
+}
+.switch-theme:hover {
+  background-color: #f0f5f9;
+  color: #52616b;
+}
+
+.dark-app {
+  background-color: #52616b;
+}
+
+.dark-button {
+  background-color: #f0f5f9 !important;
+  color: #52616b !important;
+}
+.dark-button:hover {
+  opacity: 0.5 !important;
+}/*# sourceMappingURL=style.css.map */
